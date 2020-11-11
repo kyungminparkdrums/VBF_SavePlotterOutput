@@ -14,15 +14,15 @@ Reads the output file from the **[BSM3G Plotter](https://github.com/BSM3G/Plotte
     - Additional options you can add are as follows.
       ```
          --year <year (to correct the lumi on the top right if necessary)>
-         --isPreliminary <True (change Work in Progress to Preliminary) or False (keep Work in Progress)>
-         --output_dir <output directory>
-         --legend_column <# of columns for the legend>
-         --display_title <True or False>
-         --draw_without_ratio <True or False>
-         --set_logX <True or False>
+         --isPreliminary <True ('Preliminary' below CMS logo) or False (default: 'Work in Progress' below CMS logo)>
+         --output_dir <output directory (default: ./output/)>
+         --legend_column <# of columns for the legend (default: 1)>
+         --display_title <True or False (default: False)>
+         --draw_without_ratio <True or False (default: False)>
+         --set_logX <True or False (default: False)>
          --x_range <x axis range in list format>
          --x_title <x axis title in TLatex format>
-         --set_logY <True or False>
+         --set_logY <True or False (default: False)>
          --histo_y_range <stacked histogram y axis range in list format>
          --histo_y_title <stacked histogram y axis title>
          --ratio_y_range <ratio plot y axis range in list format>
@@ -39,7 +39,6 @@ Reads the output file from the **[BSM3G Plotter](https://github.com/BSM3G/Plotte
 
 ```
 # Example
-cd ./saveAsPdf/
 python saveFigures.py --config ./config/saveOptions.config --input_file <Root file>
 
 ```
