@@ -1,6 +1,6 @@
 # SavePlotterOutput
 Reads the output file from the **[BSM3G Plotter](https://github.com/BSM3G/Plotter)** in root format and save certain figures inside the root file as pdf, following the options given by user
-  - **`saveFigures.py`**: Get a plotter output root file and a config file that contains the options for saving the figures from the plotter output. Then, save them as pdf files following the user options given in the config file.
+  - **`saveFigures.py`**: Get a plotter output root file and a config file that contains the options for saving the figures from the plotter output. Then, save them as pdf files following the user options given in the config file. **PyROOT should be available to run this. Make sure your ROOT supports PyROOT**
       ```
          python saveFigures.py --config <config file> --input_file <input root file (output file from the Plotter)>
       ```
