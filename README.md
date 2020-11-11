@@ -39,6 +39,6 @@ Reads the output file from the **[BSM3G Plotter](https://github.com/BSM3G/Plotte
 
 ```
 # Example
-python saveFigures.py --config ./config/saveOptions.config --input_file <Root file>
+python saveFigures.py --config ./config/saveOptions.config --input_file ./inputs/VBF_SUSY_0-lepton_2017_Z_CR1.root
 
 ```
