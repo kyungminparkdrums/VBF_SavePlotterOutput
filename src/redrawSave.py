@@ -127,7 +127,7 @@ def replot():
     if set_logX == False:
         hs_mc.SetMaximum(hs_mc.GetMaximum()*1.2)
         if set_logY == True:
-            hs_mc.SetMaximum(hs_mc.GetMaximum()*10) 
+            hs_mc.SetMaximum(hs_mc.GetMaximum()*100) 
 
     if change_histo_y_range == True:
         hs_mc.SetMinimum(histo_y_range[0])
@@ -137,7 +137,7 @@ def replot():
         hs_mc.GetYaxis().SetTitle(histo_y_title)
  
     hs_mc.GetYaxis().SetTitleSize(0.04)
-    hs_mc.GetYaxis().SetTitleOffset(0.88)
+    hs_mc.GetYaxis().SetTitleOffset(0.95)
 
     if set_logY == True:
         stack_pad.SetLogy()
