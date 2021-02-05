@@ -122,12 +122,16 @@ def replot():
         stack_pad.SetLogx()
         ratio_pad.SetLogx()
 
+    #hs_mc.GetYaxis().CenterTitle()
+    #ratio_bar.GetYaxis().CenterTitle()
+
     # Stacked histogram: Change y-axis settings
     # avoid overlap of histogram with the CMS logo
     if set_logX == False:
         hs_mc.SetMaximum(hs_mc.GetMaximum()*1.2)
         if set_logY == True:
             hs_mc.SetMaximum(hs_mc.GetMaximum()*100) 
+            hs_mc.SetMinimum(10**(-1)) 
 
     if change_histo_y_range == True:
         hs_mc.SetMinimum(histo_y_range[0])
@@ -137,7 +141,7 @@ def replot():
         hs_mc.GetYaxis().SetTitle(histo_y_title)
  
     hs_mc.GetYaxis().SetTitleSize(0.04)
-    hs_mc.GetYaxis().SetTitleOffset(0.95)
+    hs_mc.GetYaxis().SetTitleOffset(0.92)
 
     if set_logY == True:
         stack_pad.SetLogy()
@@ -204,6 +208,9 @@ for opt, arg in opts:
              status = "Preliminary"
     elif opt == "--output_dir":
         output_dir = arg
+        if not os.path.exists(output_dir):
+            os.mkdir(output_dir)
+            print("\nCreated the output directory({})\n".format(output_dir))
     elif opt == "--input_file":
         infile = arg
         hasInput = True
